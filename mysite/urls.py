@@ -16,10 +16,11 @@ Including another URLconf
 #Remember when we talked about a mail carrier checking where to deliver a letter#urls.py file contains a list of patterns used by urlresolver.
 
 from django.contrib import admin
-from django.urls import path, include
+from django.conf.urls import url, include
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('blog.urls')),
+    url('admin/', admin.site.urls),
+    url('', include('blog.urls')),
 
 ]
