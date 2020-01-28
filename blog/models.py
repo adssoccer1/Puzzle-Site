@@ -2,7 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.utils.html import mark_safe
-from markupfield.fields import MarkupField
 #we define objects in the app models file. Here we define a post object.
 """
 class is a special keyword that indicates that we are defining an object.
@@ -19,7 +18,7 @@ Then: Django prepared a migration file for us that we now have to apply to our d
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    text = MarkupField()
+    text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     
