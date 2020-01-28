@@ -6,9 +6,7 @@ import markupfield.fields
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('blog', '0001_initial'),
-    ]
+   
 
     operations = [
         migrations.AddField(
